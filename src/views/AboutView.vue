@@ -1,15 +1,17 @@
+<script setup lang="ts">
+import HeroSection from "@/components/layout/about/HeroSection.vue";
+import MissionSection from "@/components/layout/about/MissionSection.vue";
+import ProcessSection from "@/components/layout/about/ProcessSection.vue";
+import ContactSection from "@/components/layout/ContactSection.vue";
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <main>
+        <HeroSection />
+        <MissionSection />
+        <ProcessSection />
+        <ContactSection />
+    </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style scoped></style>

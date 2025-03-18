@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useLanguage } from "@/hooks/useLanguage";
+
+const language = useLanguage();
+</script>
 
 <template>
     <button>
-        <p>More information</p>
+        <p class="button-text">{{ language === "en" ? "More information" : "Více informací" }}</p>
     </button>
 </template>
 
@@ -10,12 +14,18 @@
 button {
     background-color: var(--green);
     border: none;
-    padding: 12px 32px;
-}
-button:hover {
+    width: 100%;
     cursor: pointer;
 }
-p {
+
+.button-text {
     font-size: 18px;
+}
+
+@media (min-width: 640px) {
+    button {
+        width: auto;
+        padding: 12px 32px;
+    }
 }
 </style>
