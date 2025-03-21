@@ -39,11 +39,10 @@ const language = useLanguage();
     list-style: none;
 }
 
-.item-container:not(:hover) details:not([open]) {
+.item-container {
     border: 1px solid var(--green);
 }
 
-.item-container:hover,
 details[open] {
     box-shadow: 0 0 0 3px var(--green);
 }
@@ -80,5 +79,11 @@ summary {
     line-height: 20px;
     margin-top: 12px;
     padding: 0 16px 16px 16px;
+}
+
+@media (hover: hover) {
+    .item-container:hover {
+        box-shadow: 0 0 0 3px var(--green);
+    }
 }
 </style>
