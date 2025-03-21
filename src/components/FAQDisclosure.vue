@@ -39,8 +39,7 @@ const language = useLanguage();
     list-style: none;
 }
 
-.item-container,
-details {
+.item-container:not(:hover) details:not([open]) {
     border: 1px solid var(--green);
 }
 
