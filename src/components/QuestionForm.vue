@@ -60,18 +60,6 @@ const submitForm = () => {
                 />
                 <p class="error-message" v-if="nameError.visible">{{ nameError.message }}</p>
             </div>
-            <!-- <div class="input-container">
-                <input
-                    class="form-input"
-                    :class="{ 'input-error': phoneError.visible }"
-                    type="tel"
-                    name="phone"
-                    :placeholder="language === 'en' ? 'Phone number' : 'Telefonní číslo'"
-                    v-model.trim="phoneInput"
-                    @focus="phoneError.visible = false"
-                />
-                <p class="error-message" v-if="phoneError.visible">{{ phoneError.message }}</p>
-            </div> -->
             <div class="input-container">
                 <vue-tel-input
                     name="phone"

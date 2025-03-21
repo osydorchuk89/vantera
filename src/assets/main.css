@@ -63,8 +63,10 @@
     font-size: 16px;
     line-height: 20px;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid black;
     margin-bottom: 2px;
+    /* -webkit-appearance: none; */
 }
 
 .form-input:focus {
@@ -114,7 +116,7 @@
 }
 
 .vue-tel-input .vti__dropdown-item:hover {
-    background-color: var(--green) !important; /* Green highlight */
+    background-color: var(--green) !important;
     color: white !important;
 }
 

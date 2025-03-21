@@ -11,8 +11,8 @@ const language = useLanguage();
         <h2 class="section-title">{{ language === "en" ? faqText.title.en : faqText.title.cz }}</h2>
         <ul class="faq-list">
             <li class="item-container" v-for="item in faqText.items" :key="item.question.en">
-                <details class="item">
-                    <summary class="question">
+                <details>
+                    <summary>
                         {{ language === "en" ? item.question.en : item.question.cz }}
                         <DownIcon />
                     </summary>
@@ -39,16 +39,17 @@ const language = useLanguage();
     list-style: none;
 }
 
-.item-container {
+.item-container,
+details[close] {
     border: 1px solid var(--green);
 }
 
 .item-container:hover,
-.item[open] {
+details[open] {
     box-shadow: 0 0 0 3px var(--green);
 }
 
-.item summary {
+details summary {
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -57,15 +58,19 @@ const language = useLanguage();
     list-style: none;
 }
 
-.item summary svg {
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary svg {
     transition: transform 0.3s ease;
 }
 
-.item[open] summary svg {
+details[open] summary svg {
     transform: rotate(180deg);
 }
 
-.question {
+summary {
     font-size: 18px;
     line-height: 23px;
     cursor: pointer;

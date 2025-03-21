@@ -19,6 +19,7 @@ button {
     width: 100%;
     padding: 12px 32px;
     cursor: pointer;
+    color: black;
 }
 
 button:hover {
@@ -40,6 +41,7 @@ button:active {
 @media (min-width: 640px) {
     button {
         width: auto;
+        align-self: flex-start;
     }
 }
 </style>

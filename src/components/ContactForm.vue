@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from "@headlessui/vue";
+import { VueTelInput } from "vue-tel-input";
+import "vue-tel-input/vue-tel-input.css";
 
 import { useLanguage } from "@/hooks/useLanguage";
 import { contactText } from "@/lib/data";
@@ -66,6 +68,19 @@ const submitForm = () => {
                 <p class="error-message" v-if="nameError.visible">{{ nameError.message }}</p>
             </div>
             <div class="input-container">
+                <vue-tel-input
+                    name="phone"
+                    v-model="phoneInput"
+                    defaultCountry="cz"
+                    validCharactersOnly
+                    :inputOptions="{
+                        placeholder: language === 'en' ? 'Phone number' : 'Telefonní číslo',
+                    }"
+                    @focus="phoneError.visible = false"
+                />
+                <p class="error-message" v-if="phoneError.visible">{{ phoneError.message }}</p>
+            </div>
+            <!-- <div class="input-container">
                 <input
                     class="form-input"
                     :class="{ 'input-error': phoneError.visible }"
@@ -76,7 +91,7 @@ const submitForm = () => {
                     @focus="phoneError.visible = false"
                 />
                 <p class="error-message" v-if="phoneError.visible">{{ phoneError.message }}</p>
-            </div>
+            </div> -->
             <!-- think abbout outsourcing this part -->
             <div class="input-container">
                 <input

@@ -320,6 +320,10 @@ export const formErrors = {
         en: "Please enter your name",
         cz: "Zadejte prosím své jméno",
     },
+    nameInvalid: {
+        en: "Please enter a valid name",
+        cz: "Zadejte prosím platné jméno",
+    },
     emailBlank: {
         en: "Please enter your email",
         cz: "Zadejte prosím svůj email",

@@ -13,12 +13,18 @@ export function useValidation() {
     const emailError = reactive({ visible: false, message: "" });
     const serviceError = reactive({ visible: false, message: "" });
 
+    const regex = /[^a-zA-Z]/;
+
     const validateForm = (name: string, phone: string, email?: string, service?: string) => {
         // Name validation
         if (!name) {
             nameError.visible = true;
             nameError.message =
                 language.value === "en" ? formErrors.nameBlank.en : formErrors.nameBlank.cz;
+        } else if (regex.test(name)) {
+            nameError.visible = true;
+            nameError.message =
+                language.value === "en" ? formErrors.nameInvalid.en : formErrors.nameInvalid.cz;
         } else {
             nameError.visible = false;
         }

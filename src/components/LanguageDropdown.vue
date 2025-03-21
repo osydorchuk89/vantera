@@ -60,7 +60,7 @@ onClickOutside(target, () => (langugeDropdownOpen.value = false));
     font-size: 18px;
     padding: 8px 12px;
     border: none;
-    /* box-shadow: none; */
+    color: black;
     background-color: transparent;
     cursor: pointer;
 }
