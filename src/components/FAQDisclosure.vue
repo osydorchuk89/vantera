@@ -40,7 +40,7 @@ const language = useLanguage();
 }
 
 .item-container,
-details[close] {
+details {
     border: 1px solid var(--green);
 }
 
