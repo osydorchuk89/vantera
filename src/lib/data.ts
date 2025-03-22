@@ -309,10 +309,9 @@ export const contactText = {
     contactEmail: "info@vantera.cz",
     contactAddress: "Na Folimance 2155/15, 120 00 Praha, Vinohrady",
     workingHours: [
-        { en: "Mon–Fri: 9:00–18:00", cz: "Po–Pá: 9:00–18:00" },
-        { en: "Sat: 10:00–15:00", cz: "So: 10:00–15:00" },
-        { en: "Sun – Closed", cz: "Ne – Zavřeno" },
-    ]
+        { en: "Mon–Fri: 8:00–15:30", cz: "Po–Pá: 8:00–15:30" },
+        { en: "Sat-Sun: Closed", cz: "So-Ne: Zavřeno" },
+    ],
 };
 
 export const formErrors = {
