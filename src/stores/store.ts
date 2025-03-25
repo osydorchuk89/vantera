@@ -44,7 +44,7 @@ export const useSuccessDialogStore = defineStore("successDialog", () => {
 });
 
 export const useLanguageStore = defineStore("language", () => {
-    const language = ref("en");
+    const language = ref("cz");
 
     const changeLanguage = () => {
         language.value === "en" ? (language.value = "cz") : (language.value = "en");

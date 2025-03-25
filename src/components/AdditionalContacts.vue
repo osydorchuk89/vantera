@@ -11,9 +11,9 @@ const language = useLanguage();
 <template>
     <div class="add-contact-container">
         <div class="social-icons">
-            <InstagramIcon />
-            <TelegramIcon />
-            <FacebookIcon />
+            <a href="https://www.instagram.com/vantera_s.r.o/" target="_blank"><InstagramIcon /></a>
+            <a href="https://t.me/Max918273645" target="_blank"><TelegramIcon /></a>
+            <a href="https://www.facebook.com/Vantera.s.r.o/" target="_blank"><FacebookIcon /></a>
         </div>
         <div>
             <p class="hours-text" v-for="item in contactText.workingHours" :key="item.en">

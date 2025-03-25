@@ -12,7 +12,7 @@ const props = defineProps<{
     <ul class="info-container">
         <li class="info-item">
             <PhoneIcon :fill="props.iconFill" />
-            <p class="info-text">+420 775 515 551</p>
+            <p class="info-text">+420 775 515 551, +420 732 655 941</p>
         </li>
         <li class="info-item">
             <MailIcon :fill="props.iconFill" />

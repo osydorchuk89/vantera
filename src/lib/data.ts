@@ -305,9 +305,6 @@ export const contactText = {
             "Odborné práce",
         ],
     },
-    contactPhone: "+420 775 515 551",
-    contactEmail: "info@vantera.cz",
-    contactAddress: "Na Folimance 2155/15, 120 00 Praha, Vinohrady",
     workingHours: [
         { en: "Mon–Fri: 8:00–15:30", cz: "Po–Pá: 8:00–15:30" },
         { en: "Sat-Sun: Closed", cz: "So-Ne: Zavřeno" },
